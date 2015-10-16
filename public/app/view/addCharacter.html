@@ -1,0 +1,53 @@
+﻿<style type="text/css">
+    .form-horizontal input.ng-invalid.ng-dirty {
+    border-color: #FA787E;
+    }
+
+    .form-horizontal input.ng-valid.ng-dirty {
+    border-color: #78FA89;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <nav class= "navbar navbar-default" role= "navigation" >
+        </nav>
+        <header>
+            <h3>Agregar Personaje</h3>
+        </header><br/>
+        <form role="form" name="myForm" class="form-horizontal">
+            <div class="row">
+                <div class= "form-group">
+                    <label class= "col-md-2">Nombre</label>
+                    <div class="col-md-4">
+                        <input ng-model="characterName" type= "text" class= "form-control" placeholder= "Nombre"/>
+                    </div>
+                </div>
+                <div class= "form-group">
+                    <label class= "col-md-2">Temporada </label>
+                    <div class="col-md-4">
+                        <select ng-model="characterSeason" class="form-control" id="character-Season">
+                            <option ng-repeat="season in seasons">{{season.text}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class= "form-group">
+                    <label class= "col-md-2">Capitulo </label>
+                    <div class="col-md-4">
+                        <select ng-model="characterChapter" class="form-control" id="character-Chapter">
+                            <option ng-repeat="chapter in chapters">{{chapter.text}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class= "form-group">
+                    <label class= "col-md-2"></label>
+                    <div class="col-md-4">
+                        <a href="#/characters" class="btn">Cancelar</a>
+                        <button ng-click="insertCharacter();"
+                                class="btn btn-primary">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

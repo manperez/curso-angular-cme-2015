@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso AnguRlar CME</title>
+        <!--CSS-->
+        <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="css/custom.css" type="text/css" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div ng-include="'app/view/menu.html'"></div>
+        <div class="container">
+            <div ng-view="" id="ng-view"></div>
+        </div>
+        <!--JS IMPORTS-->
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+        <script type="text/javascript" src="app/app.js"></script>
+        <script type="text/javascript" src="app/config/config.js"></script>
+        <script type="text/javascript" src="app/controller/listCharacterCtrl.js"></script>
+        <script type="text/javascript" src="app/controller/addCharacterCtrl.js"></script>
+        <script type="text/javascript" src="app/controller/characterDetailCtrl.js"></script>
+        <script type="text/javascript" src="app/service/factory.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+

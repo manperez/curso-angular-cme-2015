@@ -1,0 +1,53 @@
+ <div class="table-responsive">
+    <div class="col-md-12">
+        <br/>
+        <h6 class="blog-post-title text-center">Personajes</h6>
+        <br/>
+        <nav class= "navbar navbar-default" role= "navigation">
+        <div class= "navbar-header" >
+            <a class="btn btn-lg btn-success" href="#/add-character"><i class="glyphicon glyphicon-plus"></i>&nbsp;Agregar Personaje</a>
+        </div>
+        </nav>
+        <div class="panel panel-primary">
+            <div class="panel-heading">FILTROS
+                <div class="sw-search" >
+                    <div class="nav-search" id="nav-search">
+                        Nombre: <span class="input-icon">
+                        <input class="nav-search-input" ng-model="filterCharacter.nombre" type="text" style="width:200px;" focus>
+                    </span>
+                        Temporada: <span class="input-icon">
+                        <select ng-model="filterCharacter.temporada"  class="nav-search-input" style="width:100px;" focus>
+                            <option ng-repeat="season in seasons">{{season.text}}</option>
+                        </select>
+                    </span>
+                        Capítulo: <span class="input-icon">
+                        <select ng-model="filterCharacter.capitulo" class="nav-search-input" style="width:100px;" focus>
+                            <option ng-repeat="chapter in chapters">{{chapter.text}}</option>
+                        </select>
+                    </span>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table table-striped table-bordered">
+            <thead>
+            <th>Nombre&nbsp;</th>
+            <th>Temporada&nbsp;</th>
+            <th>Capítulo&nbsp;</th>
+            <th>Acciones&nbsp;</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in characters | filter:filterCharacter">
+                    <td>{{row.nombre}}</td>
+                    <td>{{row.temporada}}</td>
+                    <td>{{row.capitulo}}</td>
+                    <td>
+                        <button ng-click="deleteCharacter(row)" class="btn btn-warning">Borrar</button>
+                        <a href="#/characterDetail/{{row.nombre}}" class="btn">&nbsp;<i class="glyphicon glyphicon-edit"></i>&nbsp;Ver Detalle</a>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+    </div>
+</div>
+</div>

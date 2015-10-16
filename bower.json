@@ -1,0 +1,27 @@
+{
+  "name": "angular-seed",
+  "description": "A starter project form AngularJS",
+  "moduleType": "node",
+  "authors": [
+    {
+      "name": "Juan Ismael Vasquez",
+      "email": "ismael@meziaz.com.ar"
+    }
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.6",
+    "angular-route": "~1.4.6",
+    "angular-i18n": "~1.4.6",
+    "bootstrap": "~3.3.5"
+  },
+  "private": true
+}

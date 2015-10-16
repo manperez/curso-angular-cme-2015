@@ -1,0 +1,21 @@
+{
+  "name": "angular-seed",
+  "private": true,
+  "version": "0.0.1",
+  "description": "A starter project for AngularJS",
+  "license": "MIT",
+  "author": {
+    "name": "Juan Ismael Vasquez",
+    "email": "ismael@meziaz.com.ar"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+
+    "prestart": "npm install",
+    "start": "http-server -a localhost -p 8000 -c-1"
+  },
+  "dependencies": {
+    "bower": "^1.5.2",
+    "http-server": "^0.8.0"
+  }
+}
